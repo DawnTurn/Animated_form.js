@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    transition: background .8s;
+}
+
+form{
+    position: relative;
+    width: 30rem;
+    height: 5rem;
+}
+
+form p i{
+    font-size: 1.5rem;
+}
+
+form p{
+    width: 27rem;
+    font-size: 1.1rem;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+form .user{
+    display: flex;
+    gap: .9rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 3px;
+    transition: opacity .5s, transform .5s;
+}
+
+form .user i{
+    font-size: 1.5rem;
+}
+
+form .user .bx-down-arrow-alt{
+    cursor: pointer;
+}
+
+form .user input{
+    font-size: 1.2rem;
+    width: 20rem;
+    outline: none;
+    border: none;
+}
+
+.user, .completed{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    border-radius: 3px;
+}
+
+.email, .password, .completed{
+    transform: translateY(70px);
+    opacity: 0;
+}
+
+.red-error{
+    background: rgb(172, 28, 28);
+}
+
+.shake{
+    animation: shake .5s ease-in-out forwards;
+}
+
+@keyframes shake {
+  0%, 20%, 60%, 100%{
+    transform: rotate(0);
+  }
+  
+  40%{
+    transform: rotate(20deg);
+  }
+
+  80%{
+    transform: rotate(10deg);
+  }
+}
+
+.fade-out{
+    opacity: 0;
+    transform: translateY(70px);
+}
+
+.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
